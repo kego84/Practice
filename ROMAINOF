@@ -1,0 +1,21 @@
+I have a non-empty directory (eg /etc/something) with files that cannot be renamed, moved, or deleted.
+
+I want to check this directory into git in place.
+
+I want to be able to push the state of this repository to a remote repository (on another machine) using "git push" or something similar.
+
+This is trivial using Subversion (currently we do it using Subversion) using:
+
+svn mkdir <url> -m <msg>
+cd <localdir>
+svn co <url> .
+svn add <files etc>
+svn commit -m <msg>
+What is the git equivalent?
+
+Can I "git clone" into an empty directory and simply move the .git directory and have everything work?
+
+Thanx,
+
+-H-
+
